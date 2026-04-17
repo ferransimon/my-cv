@@ -1,0 +1,38 @@
+---
+import Github from "@icons/Github.astro"
+import Linkedin from "@icons/Linkedin.astro"
+import SocialPill from "./SocialPill.astro"
+import Mail from "@icons/Mail.astro"
+---
+
+<div id="hero" class="flex flex-col md:flex-row items-center gap-8 py-16">
+    <div class="flex flex-col gap-4">
+        <h1 class="font-heading text-6xl md:text-8xl">
+            <span class="text-display-sm">Hey, I am</span></br>
+            <span class="text-primary">Ferran</span>
+        </h1>
+        <p class="text-lg md:text-xl mt-4 text-secondary">
+            <span class="text-amber-500/80">+10 years of experience</span> Full Stack Engineer with a dual background in Cybersecurity and Digital Marketplaces. Having evolved from a Backend Specialist to a Frontend Lead, I focus on building high-scale, distributed systems while maintaining a sharp eye on the user experience.
+        </p>
+        <p class="text-lg md:text-xl mt-4 text-secondary">
+            I don’t just write code; I bridge the gap between technical architecture and business goals. Whether it's leading a company-wide migration to a modern NextJS/TypeScript stack or architecting event-driven microservices in Kotlin, my goal is always to move the needle on key company KPIs.
+        </p>
+        <ul class="list-none flex gap-4 mt-4 flex-wrap">
+            <li>
+                <SocialPill href="https://github.com/ferransimon" label="GitHub">
+                    <Github class="size-6" />
+                </SocialPill>
+            </li>
+            <li>
+                <SocialPill href="https://www.linkedin.com/in/ferran-simon-cabrera-97413076" label="LinkedIn">
+                    <Linkedin class="size-6" />
+                </SocialPill>
+            </li>
+            <li>
+                <SocialPill href="mailto:ferran@nomis.es" label="ferran@nomis.es">
+                    <Mail class="size-6" />
+                </SocialPill>
+            </li>
+        </div>
+    </div>
+</div>

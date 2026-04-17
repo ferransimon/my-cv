@@ -1,0 +1,33 @@
+---
+interface Props {
+    startYear: string;
+    endYear: string;
+    modality: string;
+    title: string;
+    company: string;
+    current?: boolean;
+    skills: string[];
+}
+const { startYear, endYear, modality, title, company, current, skills } = Astro.props;
+---
+
+<li class="grid md:grid-cols-4 grip-cols-1 gap-4">
+    <div class="col-span-1 flex flex-col gap-1 justify-self-start">
+        <time class="font-semibold text-primary text-sm text-on-surface-variant text-nowrap">{startYear} - {endYear}</time>
+        <span class="text-sm text-on-surface-variant">{modality}</span>
+    </div>
+    <div class={`col-span-3 flex flex-col gap-1 ${current ? 'border-l border-primary pl-4 -ml-4' : ''}`}>
+        <h3 class="text-lg font-semibold text-amber-300">{title} - <span class="text-sm text-on-surface-variant">{company}</span></h3>
+        <p class="text-pretty leading-relaxed">
+            <slot />
+        </p>
+        <div class="flex flex-wrap gap-2 mt-2">
+            {skills.map((skill) => (
+                <div class="flex items-center rounded-2xl bg-secondary-container px-2 py-1 text-on-secondary-container">
+                    <span class="text-label-sm uppercase">{skill}</span>
+                </div>
+            ))}
+        </div>
+
+    </div>
+</li>

@@ -1,0 +1,14 @@
+---
+import Experience from '@components/Experience.astro';
+---
+<section id="experiences">
+    <h2 class="flex flex-row gap-x-2 items-center text-3xl font-heading mb-8">Experiences</h2>
+    <ul class="list-none flex flex-col gap-8">
+        <Experience skills={["JavaScript", "TypeScript", "React", "Node.js", "Next.js", "CWV", "Vitest", "Cypress", "MVVM", "Kotlin", "Java", "AWS", "TDD", "Tactical DDD", "Postgresql", "Apache Kafka", "Clean Architecture", "Calude Code", "Docker", "Kubernetes", "CI/CD", "Monitoring"]} current startYear="2017" endYear="Present" modality="Remote" title="Staff Full Stack Software Engineer" company="Adevinta Spain">
+           Architected and led the strategic migration from a legacy in-house frontend framework to a modern stack, resulting in an improvement in development experience and AI first capabilities. Spearheaded the adoption of AI technologies, integrating them into the development workflow to enhance productivity and code quality. Implemented a comprehensive testing strategy using Vitest and Cypress, achieving a significant increase in test coverage and reliability, improve CI/CD speed from houres to minutes. Mentoring junior and senior frontend developers while advocating for the frontend community within DevOps.
+        </Experience>
+        <Experience skills={["Python", "Java", "Spring Boot", "MongoDB", "Restful API", "Crawling", "SQS", "Celery", "Flask"]} startYear="2014" endYear="2017" modality="Presencial" title="Software Engineer" company="Blueliv">
+            Developed and maintained a high-performance web crawler using Python and Java, which collected and processed large volumes of data from various sources. Designed and implemented RESTful APIs to expose the collected data to clients, ensuring scalability and reliability. Utilized MongoDB for efficient data storage and retrieval, optimizing database performance for large datasets. Implemented asynchronous task processing using Celery and SQS, improving the efficiency of data processing workflows. Collaborated with cross-functional teams to integrate the crawler with other systems and services, enhancing overall product functionality.
+        </Experience>
+    </ul>
+</section>

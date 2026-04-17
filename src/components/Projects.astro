@@ -1,0 +1,65 @@
+---
+import ProjectItem from "./ProjectItem.astro"
+import Claude from "@icons/Claude.astro"
+import Vercel from "@icons/Vercel.astro"
+import NextJS from "@icons/NextJS.astro"
+import Kotlin from "@icons/Kotlin.astro"
+import TypeScript from "@icons/TypeScript.astro"
+import Docker from "@icons/Docker.astro"
+import Kubernetes from "@icons/Kubernetes.astro"
+import Tailwind from "@icons/Tailwind.astro"
+import React from "@icons/React.astro"
+import JavaScript from "@icons/JavaScript.astro"
+import AWS from "@icons/AWS.astro"
+import PostgreSQL from "@icons/PostgreSQL.astro"
+import Python from "@icons/Python.astro"
+import AstroIcon from "@icons/AstroIcon.astro"
+import MongoDB from "@icons/MongoDB.astro"
+import Java from "@icons/Java.astro"
+---
+<section id="projects">
+    <h2 class="text-3xl font-heading mb-8">Projects</h2>
+    <ul class="list-none flex overflow-x-auto gap-8 pb-8 custom-scrollbar">
+        <ProjectItem title="Local PDF editor" link="https://my-pdf-online.vercel.app/" description="Vibe coded a local PDF editor using modern web technologies, from 0 to production in less than an hour.">
+            <Claude class="size-4" />
+            <Vercel class="size-4" />
+        </ProjectItem>
+        <ProjectItem title="InfoJobs" link="https://www.infojobs.net" description="A web platform for job searching and recruitment, providing a seamless experience for both job seekers and employers." >
+            <Kotlin class="size-4" />
+            <TypeScript class="size-4" />
+            <NextJS class="size-4" />
+            <Docker class="size-4" />
+            <Kubernetes class="size-4" />
+            <React class="size-4" />
+            <JavaScript class="size-4" />
+            <Tailwind class="size-4" />
+            <AWS class="size-4" />
+            <PostgreSQL class="size-4" />
+        </ProjectItem>
+        <ProjectItem title="Portfolio" link="/" description="My personal portfolio website, built with Astro and Tailwind CSS, showcasing my projects, experiences, and studies in a clean and modern design." >
+            <AstroIcon class="size-4" />
+            <Tailwind class="size-4" />
+        </ProjectItem>
+        <ProjectItem title="DNS Sinkhole" description="A project to create a DNS sinkhole for network security purposes. From automatically buying domains to redirecting malicious traffic.">
+            <Python class="size-4" />
+            <AWS class="size-4" />
+            <MongoDB class="size-4" />
+            <Java class="size-4" />
+        </ProjectItem>
+    </ul>
+</section>
+
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+    }
+</style>

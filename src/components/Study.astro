@@ -1,0 +1,21 @@
+---
+interface Props {
+    startYear: string;
+    endYear: string;
+    title: string;
+    university: string;
+}
+const { startYear, endYear, title, university } = Astro.props;
+---
+
+<li class="grid md:grid-cols-4 grip-cols-1 gap-4">
+    <div class="col-span-1 flex flex-col gap-1 justify-self-start">
+        <span class="font-semibold text-primary text-sm text-on-surface-variant text-nowrap">{startYear} - {endYear}</span>
+    </div>
+    <div class={`col-span-3 flex flex-col gap-1`}>
+        <h3 class="text-lg font-semibold text-amber-300">{title} - <span class="text-sm text-on-surface-variant">{university}</span></h3>
+        <p class="text-pretty leading-relaxed">
+            <slot />
+        </p>
+    </div>
+</li>

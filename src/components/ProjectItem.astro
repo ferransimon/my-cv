@@ -1,0 +1,38 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    link?: string;
+}
+---
+<li class="shrink-0">
+    {Astro.props.link ? <a href={Astro.props.link} target="_blank" rel="noopener noreferrer" >
+        <article class="flex flex-col h-full border border-secondary-container rounded-lg p-6 gap-4 max-w-80 hover:bg-secondary-container transition">
+            <header>
+                <h1 class="text-headline-md">{Astro.props.title}</h1>
+            </header>
+            <main class="flex-1">
+                <p class="text-pretty leading-relaxed">{Astro.props.description}</p>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <slot />
+                </div>
+            </main>
+            <footer class="align-end">
+                <span class="text-primary">Learn more</span>
+            </footer>
+        </article>
+    </a> : <article class="flex flex-col h-full border border-secondary-container rounded-lg p-6 gap-4 max-w-80 hover:bg-secondary-container transition">
+        <header>
+            <h1 class="text-headline-md">{Astro.props.title}</h1>
+        </header>
+        <main class="flex-1">
+            <p class="text-pretty leading-relaxed">{Astro.props.description}</p>
+            <div class="flex flex-wrap gap-4 mt-4">
+                <slot />
+            </div>
+        </main>
+        <footer>
+            <span class="text-amber-400 border border-amber-400 px-2 py-1 rounded-lg">private</span>
+        </footer>
+    </article>}
+</li>
