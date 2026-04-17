@@ -6,6 +6,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://ferransimon.github.io',
+  base: 'my-cv',
   fonts: [
     {
       provider: fontProviders.googleicons(),
